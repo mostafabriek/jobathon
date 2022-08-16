@@ -26,19 +26,26 @@ function App() {
   }, [])
   return (
     <>
-      <tbody>
-        <table>
+      <table>
+        <tbody>
+          <tr>
+            <th>name</th>
+            <th>address</th>
+            <th>age</th>
+            <th>email</th>
+            <th>date</th>
+          </tr>
           {customers.map((item, index) => (
             <tr key={index}>
-              <th>{item.name}</th>
-              <th>{item.address}</th>
-              <th>{item.age}</th>
-              <th>{item.email}</th>
-              <th>{item.date}</th>
+              <td>{item.name}</td>
+              <td>{item.address}</td>
+              <td>{item.age}</td>
+              <td>{item.email}</td>
+              <td>{item.date}</td>
             </tr>
           ))}
-        </table>
-      </tbody>
+        </tbody>
+      </table>
     </>
   )
 }
