@@ -2,28 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import data from './data.json'
 const customers = data.customers
+function printClicked() {
+  window.print()
+}
 function App() {
-  // const [data, setData] = useState([])
-  // const getData = () => {
-  //   fetch('./data.json', {
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       Accept: 'application/json',
-  //     },
-  //   })
-  //     .then(function (response) {
-  //       console.log(response)
-  //       return response.json()
-  //     })
-  //     .then(function (myJson) {
-  //       console.log(myJson)
-  //       setData(myJson)
-  //     })
-  // }
   console.log(customers)
-  useEffect(() => {
-    // getData()
-  }, [])
+  useEffect(() => {}, [])
   return (
     <>
       <table>
@@ -46,6 +30,9 @@ function App() {
           ))}
         </tbody>
       </table>
+      <div className="print" onClick={printClicked}>
+        print
+      </div>
     </>
   )
 }
